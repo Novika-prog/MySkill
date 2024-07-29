@@ -1,0 +1,196 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border</title>
+    <style>
+        .box {
+            height: 14rem;
+            width: 14rem;
+            border-width: 1rem;
+            border-color: yellow;
+        }
+
+        .border-style {
+            /*   border-style: dashed; */
+            /*   border-style: dotted; */
+            /*   border-style: solid; */
+            /*   border-style: double; */
+            /*   border-style: inset; */
+            /*   border-style: ridge; */
+            /*   border-style: groove; */
+            border-style: outset;
+        }
+
+        .border-color {
+            border-style: dotted;
+            /*   border-color: red; */
+            border-top-color: green;
+            border-right-color: navy;
+            border-bottom-color: hotpink;
+            border-left-color: goldenrod;
+        }
+
+        .logical-properties {
+            border-style: groove;
+            /*   border-inline: 2px solid brown; */
+            border-inline-start-color: green;
+            border-inline-end-color: red;
+            border-block-start-color: magenta;
+            border-block-end-color: lightblue;
+            direction: rtl;
+        }
+
+        .border-radius {
+            border-style: double;
+            border-color: black;
+            border-radius: 50%;
+            /*   border-top-left-radius: 100px; */
+            /*   border-top-right-radius: 100px; */
+            /*   border-bottom-left-radius: 100px; */
+            /*   border-bottom-left-radius: 100px; */
+            /*   boder-radius: 100px; */
+        }
+
+        .border-images {
+            border: 1px solid;
+            border-image-source: url(https://assets.codepen.io/174183/border-image-frame.jpg);
+            border-image-slice: 61 58 51 48;
+            border-image-width: 20px 20px 20px 20px;
+            border-image-outset: 0px 0px 0px 0px;
+            border-image-repeat: stretch stretch;
+        }
+
+        /*   CSS shadow */
+        /*   CSS shadow */
+        /*   CSS shadow */
+        /*   CSS shadow */
+        /*   CSS shadow */
+        /*   CSS shadow */
+        /*   CSS shadow */
+        /*   CSS shadow */
+        /*   CSS shadow */
+        /*   CSS shadow */
+        /*   CSS shadow */
+        /*   CSS shadow */
+        /*   CSS shadow */
+        /*   CSS shadow */
+        /*   CSS shadow */
+        /*   CSS shadow */
+        /*   CSS shadow */
+        /*   CSS shadow */
+        /*   CSS shadow */
+        /*   CSS shadow */
+        /*   CSS shadow */
+        .wrapper {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .wrapper:not(:last-child) {
+            margin-bottom: 4rem;
+        }
+
+        .box {
+            height: 10rem;
+            width: 10rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box-shadows {
+            box-shadow: 5px 5px 20px 5px #000;
+        }
+
+        .box-shadows-inset {
+            box-shadow: inset 5px 5px 20px 5px #000;
+        }
+
+        .multiple-shadows {
+            box-shadow: 5px 5px 20px 5px darkslateblue, -5px -5px 20px 5px dodgerblue,
+                inset 0px 0px 10px 2px darkslategray, inset 0px 0px 20px 10px steelblue;
+            border-radius: 25px;
+        }
+
+        .text {
+            color: #272eb5;
+            font-size: 48px;
+            font-family: "Roboto", Arial, Helvetica, sans-serif;
+            font-weight: 900;
+            text-shadow: 3px 3px 3px hotpink;
+            margin: 0;
+        }
+
+        .text-transparent-shadows {
+            color: rgb(0 0 0 / 20%);
+        }
+
+        .text-multiple-shadows {
+            text-shadow: 1px 1px 0px white,
+                2px 2px 0px firebrick;
+            color: darkslategray;
+        }
+
+        figure {
+            max-width: 25rem;
+            margin: 2em auto;
+            padding: 1em;
+            background: #718093;
+            border-radius: 0.5em;
+        }
+
+        figure img {
+            filter: drop-shadow(0px 0px 30px rgba(0 255 255 / 50%));
+            /*   filter: drop-shadow(0px 0px 10px hotpink) drop-shadow(10px 10px 20px rgba(0 0 0 / 30%)); */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- border style -->
+    <div class="box border-style"></div>
+
+    <!-- border-color -->
+    <div class="box border-color"></div>
+
+    <!-- border logical properties -->
+    <div class="box logical-properties"></div>
+
+    <!-- border radius -->
+    <div class="box border-radius"></div>
+
+    <!-- border images -->
+    <div class="box border-images"></div>
+
+    <!-- CSS Shadow--><!-- CSS Shadow--><!-- CSS Shadow--><!-- CSS Shadow-->
+    <!-- CSS Shadow--><!-- CSS Shadow--><!-- CSS Shadow--><!-- CSS Shadow-->
+    <!-- CSS Shadow--><!-- CSS Shadow--><!-- CSS Shadow--><!-- CSS Shadow-->
+    <!-- box shadows -->
+    <br><br><br><hr><br><br>
+    <div class="wrapper">
+        <div class="box box-shadows">box shadow</div>
+        <div class="box box-shadows-inset">inset</div>
+        <div class="box multiple-shadows">multiple shadows</div>
+    </div>
+
+    <!-- text shadows -->
+    <div class="wrapper">
+        <p class="text text-shadows">Hello, MySkill!</p>
+        <p class="text text-transparent-shadows">This text is transparent yet you can see the shadow</p>
+        <p class="text text-multiple-shadows">Multiple shadows are cool</p>
+    </div>
+
+    <!-- drop shadows -->
+    <div class="wrapper">
+        <figure>
+            <img src="https://assets.codepen.io/174183/isolated-tshirt.png?width=320&format=auto&quality=60"
+                alt="A white t-shirt, isolated, on a hanger" />
+            <figcaption>A cool, white t-shirt</figcaption>
+        </figure>
+    </div>
+</body>
+
+</html>

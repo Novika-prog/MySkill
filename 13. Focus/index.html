@@ -1,0 +1,71 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper:not(:first-child) {
+            margin-top: 3rem;
+        }
+
+        input[type="text"] {
+            width: 250px;
+        }
+
+        .styling-focus {
+            display: block;
+        }
+
+        .styling-focus:focus {
+            outline: 2px solid red;
+            outline-offset: 1rem;
+        }
+
+        .focus-within .helper {
+            display: none;
+        }
+
+        .focus-within:focus-within .helper {
+            display: block;
+        }
+
+        .focus-visible button:focus {
+            outline: none;
+        }
+
+        .focus-visible button:focus-visible {
+            outline: 2px dashed blue;
+            outline-offset: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <input type="text" placeholder="please press tab button to focus">
+        <a href="">second focus after press tab again</a>
+        <div>not focusable elements</div>
+        <div tabindex="0">i am focusable now!</div>
+    </div>
+
+    <!-- styling focus -->
+    <div class="wrapper">
+        <a href="" class="styling-focus">Styling the focus</a>
+    </div>
+
+    <!-- focus within -->
+    <div class="wrapper focus-within">
+        <button class="button">Use your tab key to focus this button</button>
+        <div class="helper">Hello!</div>
+    </div>
+
+    <!-- focus visible -->
+    <div class="wrapper focus-within">
+        <button class="button">I am a button</button>
+    </div>
+
+</body>
+
+</html><!-- focus on element -->

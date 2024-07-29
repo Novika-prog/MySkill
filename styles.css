@@ -1,0 +1,31 @@
+.master-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: wrap;
+    width: calc(100% + 16px);
+    justify-content: center;
+}
+
+.box {
+    height: 10rem;
+    width: 10rem;
+    position: relative;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 1.3rem;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    background: linear-gradient(to bottom right,rgb(12, 63, 167), rgb(55, 104, 202));
+    border-radius: 10%;
+    border: 0.5rem outset blue;
+    display: inline-block;
+    cursor: pointer;  
+}
+.box:hover {
+    background: white;
+    color: black;
+    border-color: white;
+}
